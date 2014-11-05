@@ -5,13 +5,8 @@
  */
 
 package mmorpho;
-import ij.*;
-import ij.process.*;
-import ij.plugin.filter.*;
-import java.util.*;
-import java.lang.reflect.*;
-import ij.util.*;
-import mmorpho.*;
+import ij.IJ;
+import ij.process.ImageProcessor;
 /**
  *
  * @author  Dimiter Prodanov

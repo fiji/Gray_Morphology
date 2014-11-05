@@ -1,15 +1,22 @@
 //package mmorpho;
-import ij.*;
-import ij.process.*;
-import ij.gui.*;
+import ij.IJ;
+import ij.ImageJ;
+import ij.ImagePlus;
+import ij.Prefs;
+import ij.gui.GenericDialog;
+import ij.gui.ImageWindow;
+import ij.gui.Roi;
+import ij.plugin.filter.PlugInFilter;
+import ij.process.ByteProcessor;
+import ij.process.FloatProcessor;
+import ij.process.ImageProcessor;
 
-import java.awt.*;
-import java.awt.image.*;
-import ij.plugin.filter.*;
-import java.util.*;
-import java.lang.reflect.*;
-import ij.util.*;
-import mmorpho.*;
+import java.awt.Rectangle;
+import java.util.Properties;
+
+import mmorpho.Constants;
+import mmorpho.MorphoProcessor;
+import mmorpho.StructureElement;
 
 /**
  * @version  2.3.1 13 June 2006

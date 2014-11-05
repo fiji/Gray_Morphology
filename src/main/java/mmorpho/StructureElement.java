@@ -23,9 +23,9 @@
  *      Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 package mmorpho;
-import java.util.*;
-import mmorpho.*;
-import ij.*;
+import ij.IJ;
+
+import java.util.StringTokenizer;
 
 public class StructureElement  implements Constants  {
     

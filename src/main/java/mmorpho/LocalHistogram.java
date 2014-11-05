@@ -1,7 +1,6 @@
 package mmorpho;
 
-import mmorpho.*;
-import ij.*;
+import ij.IJ;
 
 /*
  
