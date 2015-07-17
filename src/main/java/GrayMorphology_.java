@@ -93,7 +93,7 @@ public class GrayMorphology_ implements PlugInFilter, Constants {
         else {
             if (imp!=null) {
                 win = imp.getWindow();
-                win.running = true;
+                if (win != null) win.running = true;
                
                 roi = imp.getRoi();
                 isLineRoi=(roi!=null && roi.getType()==Roi.LINE);
