@@ -21,6 +21,10 @@
 		<tag>HEAD</tag>
 		<url>https://github.com/fiji/Gray_Morphology</url>
 	</scm>
+	<issueManagement>
+		<system>GitHub Issues</system>
+		<url>https://github.com/fiji/Gray_Morphology/issues</url>
+	</issueManagement>
 	<ciManagement>
 		<system>Jenkins</system>
 		<url>http://jenkins.imagej.net/job/Gray_Morphology/</url>
