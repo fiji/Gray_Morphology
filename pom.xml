@@ -14,6 +14,8 @@
 
 	<name>plugins/Gray_Morphology.jar</name>
 	<description />
+	<url>http://imagej.net/Gray_Morphology</url>
+	<inceptionYear>2003</inceptionYear>
 
 	<developers>
 		<developer>
