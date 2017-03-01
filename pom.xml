@@ -79,8 +79,8 @@
 		<url>https://github.com/fiji/Gray_Morphology/issues</url>
 	</issueManagement>
 	<ciManagement>
-		<system>Jenkins</system>
-		<url>http://jenkins.imagej.net/job/Gray_Morphology/</url>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/fiji/Gray_Morphology</url>
 	</ciManagement>
 
 	<properties>
