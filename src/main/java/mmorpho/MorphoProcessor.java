@@ -202,7 +202,6 @@ public class MorphoProcessor implements Constants {
     
     /** Performs gray level dilation
      * @param ip the ImageProcessor
-     * @param se the StructureElement
      */
     public void dilate(ImageProcessor ip){
         
@@ -349,9 +348,7 @@ public class MorphoProcessor implements Constants {
     /** Performs graylevel erosion followed by graylevel dilation
      *  with arbitrary structural element se
      * @param ip the ImageProcessor
-     * @param se the StructureElement
      */
-    
     public void open(ImageProcessor ip){
         int width = ip.getWidth();
         int height = ip.getHeight();
@@ -435,10 +432,7 @@ public class MorphoProcessor implements Constants {
     /** Performs fast graylevel erosion followed by fast graylevel dilation
      *  with arbitrary structural element se
      * @param ip the ImageProcessor
-     * @param se the StructureElement
      */
-    
-    
     public void fopen(ImageProcessor ip){
         int width = ip.getWidth();
         int height = ip.getHeight();
@@ -531,8 +525,6 @@ public class MorphoProcessor implements Constants {
      *  Performs graylevel dilation followed by graylevel erosion
      *  with arbitrary structural element
      * @param ip the ImageProcessor
-     * @param se the StructureElement
-     *
      **/
     public void close(ImageProcessor ip){
         int width = ip.getWidth();
@@ -614,9 +606,7 @@ public class MorphoProcessor implements Constants {
      *  Performs fast graylevel dilation followed by fast graylevel erosion
      *  with arbitrary structural element
      *  @param ip the ImageProcessor
-     * @param se the StructureElement
      */
-    
     public void fclose(ImageProcessor ip){
         
         //fastDilate(ip,se);

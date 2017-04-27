@@ -352,7 +352,7 @@ public class GrayMorphology_ implements PlugInFilter, Constants {
      
         
         /** Logs array
-         * @param arr the array
+         * @param a the array
          */
         public void Log(int[][] a){
             String aStr="";
