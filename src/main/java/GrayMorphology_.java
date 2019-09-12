@@ -54,10 +54,6 @@ import mmorpho.StructureElement;
  * @author Prodanov
  *
  */
-/**
- * @author Prodanov
- *
- */
 public class GrayMorphology_ implements PlugInFilter, Constants {
     ImagePlus imp;
     public String kernelText = " 0 0 0 0 0\n 0 0 255 0 0\n 0 255 255 255 0\n 0 0 255 0 0\n 0 0 0 0 0\n";
