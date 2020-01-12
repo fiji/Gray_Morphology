@@ -12,6 +12,7 @@ import ij.process.FloatProcessor;
 import ij.process.ImageProcessor;
 
 import java.awt.Rectangle;
+import java.io.File;
 import java.util.Properties;
 
 import mmorpho.Constants;
@@ -19,15 +20,20 @@ import mmorpho.MorphoProcessor;
 import mmorpho.StructureElement;
 
 /**
- * @version  2.3.1 13 June 2006
+ * @version  
+ * 			 2.3.2 12 Jan 2020	
+ * 			 2.3.1 13 June 2006
  * 			 2.3   25 May 2006
  * 			 2.1;  09 Dec 2004
-             2.0;  13 Nov 2004
+ *           2.0;  13 Nov 2004
+ *            
  * @author Dimiter Prodanov
- * 		   Catholic University of Louvaion; University of Leiden
+ * 		   IMEC;
+ * 		   Catholic University of Louvain; 
+ * 		   University of Leiden
  *
  *
- * @contents       This plugin performs the basic morphologic operations on grayscale images
+ * @contents       This plugin performs the basic morphological operations on grayscale images
  *      erosion, dilation, opening and closing with several types of structuring elements.
  *      It is build upon the StructureElement class
  *
@@ -51,7 +57,7 @@ import mmorpho.StructureElement;
 
 
 /**
- * @author Prodanov
+ * @author Dimiter Prodanov
  *
  */
 public class GrayMorphology_ implements PlugInFilter, Constants {
@@ -141,7 +147,21 @@ public class GrayMorphology_ implements PlugInFilter, Constants {
     /* Now we can run the plugin as an application
      * */
     public static void main(String[] args) {
-    	new ImageJ();
+    	try {
+
+			File f=new File(args[0]);
+
+			if (f.exists() && f.isDirectory() ) {
+				System.setProperty("plugins.dir", args[0]);
+				new ImageJ();
+			} else {
+				throw new IllegalArgumentException();
+			}
+		}
+		catch (Exception ex) {
+			IJ.log("plugins.dir misspecified\n");
+			ex.printStackTrace();
+		}
     }
     
     private boolean seshown=false;

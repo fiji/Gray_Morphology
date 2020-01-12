@@ -393,36 +393,7 @@ public class MorphoProcessor implements Constants {
             }
                 
         
-        /*
-        for (int c=0;c<pixels.length;c++) {
-            // i=c/width;
-            // j=c%width;
-            wnd=getMinMax(c, width, height, pixels, pg, ERODE);
-       
-            min=wnd[0]+255;
-            newpix[c]=(byte)(min&0xFF);
-            
-        }
         
-        
-        int  max = 32768;
-        k=x=y=0;
-        //wnd=new int[sz];
-        
-        
-     
-        i=j=0;
-        for (int c=0;c<pixels.length;c++) {
-            
-            //i=c/width;
-            //j=c%width;
-            wnd=getMinMax(c, width, height, newpix, pg,DILATE);
-            
-            max=wnd[1]-255;
-            newpix2[c]=(byte)(max&0xFF);
-            
-        }
-        */
         System.arraycopy(newpix2, 0, pixels, 0, pixels.length);
         
         
@@ -567,35 +538,7 @@ public class MorphoProcessor implements Constants {
                       }
                 }
             }
-        /*
         
-    
-        int i,j=0;
-        for (int c=0;c<pixels.length;c++) {
-            
-            //i=c/width;
-            //j=c%width;
-            wnd=getMinMax(c, width, height, pixels, pg,DILATE);
-            //max=getMinMax(wnd)[1]-255;
-            max=wnd[1]-255;
-            newpix[c]=(byte)(max&0xFF);
-            
-        }
-        
-        int min = -32767;
-        k=x=y=0;
-        
-        i=j=0;
-        for (int c=0;c<pixels.length;c++) {
-            // i=c/width;
-            // j=c%width;
-            wnd=getMinMax(c, width, height, newpix, pg, ERODE);
-            //min=getMinMax(wnd)[0]+255;
-            min=wnd[0]+255;
-            newpix2[c]=(byte)(min&0xFF);
-            
-        }
-        */
         
         System.arraycopy(newpix2, 0, pixels, 0, pixels.length);
         
@@ -1002,14 +945,14 @@ public class MorphoProcessor implements Constants {
      * minAndMax[1] = max;
      * return minAndMax;
      * }
-     */
+     *
     private final float findMean(float[] values) {
         float sum = values[0];
         for (int i=1; i<values.length; i++)
             sum += values[i];
         return (float)(sum/values.length);
     }
-    
+    */
     /** Logs
      * @param arr the array
      */
