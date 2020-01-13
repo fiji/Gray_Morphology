@@ -76,10 +76,10 @@ public class GrayMorphology_ implements PlugInFilter, Constants {
     public final static String[] strelitems={"circle","diamond","square","hor line","ver line","2p h","2p v","free form"};
     public final static int[] constitems={CIRCLE,DIAMOND,SQARE,HLINE,VLINE,HPOINTS,VPOINTS,FREE};
     public final static String[] morphitems={"erode","dilate","open","close",
-    "fast erode","fast dilate","fast open","fast close"};
+    "fast erode","fast dilate","fast open","fast close", "white top hat", "black top hat"};
     
     public final static int ERODE=0, DILATE=1,OPEN=2,CLOSE=3,
-    FERODE=4,FDILATE=5,FOPEN=6,FCLOSE=7;
+    FERODE=4,FDILATE=5,FOPEN=6,FCLOSE=7, WHITE_TOP_HAT = 8, BLACK_TOP_HAT = 9;
     private Roi roi;
     boolean isLineRoi;
     int slice=0;
@@ -319,6 +319,14 @@ public class GrayMorphology_ implements PlugInFilter, Constants {
         	}
             break;
         }
+        case WHITE_TOP_HAT: {
+			mp.whiteTopHat(ip);
+			break;
+		}
+		case BLACK_TOP_HAT: {
+			mp.blackTopHat(ip);
+			break;
+		}
  
     } // switch
     	
